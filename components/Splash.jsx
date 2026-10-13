@@ -49,8 +49,8 @@ export default function Splash() {
             initial={{ opacity: 0, scale: 0.3 }} animate={{ opacity: 1, scale: 1.3 }} transition={{ duration: 2.2, ease: "easeOut" }} />
 
           <div className="relative flex items-center gap-4 sm:gap-6">
-            {/* logo : tuile noire qui tourne et rebondit en arrivant */}
-            <motion.div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-ink shadow-xl sm:h-20 sm:w-20"
+            {/* logo : tuile qui tourne et rebondit en arrivant */}
+            <motion.div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-night sm:h-20 sm:w-20"
               initial={{ opacity: 0, scale: 0, rotate: -120 }} animate={{ opacity: 1, scale: 1, rotate: 0 }}
               transition={{ type: "spring", stiffness: 160, damping: 14, mass: 0.9 }}>
               <img src="/L1.png" alt="Michel Dev" className="h-8 w-auto sm:h-12" />
@@ -68,7 +68,7 @@ export default function Splash() {
                       ı
                       {/* le point tombe d'en haut et rebondit */}
                       {dot && (
-                        <motion.span className="absolute left-1/2 top-[0.12em] h-[0.15em] w-[0.15em] -translate-x-1/2 rounded-full bg-ink"
+                        <motion.span className="absolute left-1/2 top-[0.12em] h-[0.15em] w-[0.15em] -translate-x-1/2 rounded-full bg-lime"
                           initial={{ y: -90, opacity: 0, scale: 0.6 }} animate={{ y: 0, opacity: 1, scale: 1 }}
                           transition={{ type: "spring", stiffness: 300, damping: 9 }} />
                       )}
@@ -77,14 +77,14 @@ export default function Splash() {
                 </motion.span>
               ))}
               {/* trait vert qui se passe sous le nom, comme un surligneur */}
-              <motion.span aria-hidden className="absolute inset-x-0 bottom-[0.02em] -z-10 h-[0.32em] origin-left bg-lime"
+              <motion.span aria-hidden className="absolute inset-x-0 bottom-[0.02em] -z-10 h-[0.32em] origin-left bg-lime/30"
                 initial={{ scaleX: 0 }} animate={{ scaleX: dot ? 1 : 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }} />
             </p>
           </div>
 
           {/* barre de chargement */}
           <div aria-hidden className="absolute inset-x-0 bottom-0 h-1 bg-ink/10">
-            <motion.div className="h-full bg-ink" initial={{ width: "0%" }} animate={{ width: "100%" }}
+            <motion.div className="h-full bg-lime" initial={{ width: "0%" }} animate={{ width: "100%" }}
               transition={{ duration: TOTAL / 1000, ease: "linear" }} />
           </div>
         </motion.div>

@@ -19,9 +19,9 @@ export default function BottomNav() {
 
   return (
     <motion.nav aria-label="Navigation mobile" style={{ y, opacity }}
-      className="fixed inset-x-3 bottom-3 z-50 flex justify-around rounded-full bg-ink p-2 shadow-2xl md:hidden">
+      className="fixed inset-x-3 bottom-3 z-50 flex justify-around rounded-full bg-night border border-white/10 p-2 shadow-2xl md:hidden">
       {ITEMS.map(([id, label]) => (
-        <a key={id} href={`#${id}`} className={`relative rounded-full px-5 py-3 text-sm font-medium ${active === id ? "text-ink" : "text-white/70"}`}>
+        <a key={id} href={`#${id}`} className={`relative rounded-full px-5 py-3 text-sm font-medium ${active === id ? "text-night" : "text-white/70"}`}>
           {active === id && <motion.span layoutId="pill" className="absolute inset-0 rounded-full bg-lime" transition={{ type: "spring", stiffness: 400, damping: 32 }} />}
           <span className="relative">{label}</span>
         </a>

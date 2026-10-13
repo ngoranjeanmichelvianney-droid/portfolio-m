@@ -18,7 +18,7 @@ export default function Hero() {
         Je conçois des sites web et des applications modernes pour transformer des besoins concrets en solutions numériques utiles.
       </motion.p>
       <motion.div {...up(3.15)} className="mt-10 flex flex-wrap gap-3">
-        <a href="#contact" className="rounded-full bg-ink px-7 py-4 font-medium text-white transition hover:-translate-y-0.5 hover:bg-black">Parlons de votre projet</a>
+        <a href="#contact" className="rounded-full bg-lime px-7 py-4 font-medium text-night transition hover:-translate-y-0.5 hover:brightness-110">Parlons de votre projet</a>
         <a href="#projet" className="rounded-full border border-ink/25 px-7 py-4 font-medium transition hover:-translate-y-0.5 hover:border-ink">Découvrir mon travail</a>
       </motion.div>
     </section>
