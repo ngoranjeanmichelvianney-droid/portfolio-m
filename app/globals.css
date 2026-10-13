@@ -15,7 +15,17 @@ body::before { content: ""; position: fixed; inset: 0; z-index: 60; pointer-even
 .marquee-track { display: flex; width: max-content; animation: marquee 32s linear infinite; }
 .marquee-track.reverse { animation-direction: reverse; animation-duration: 40s; }
 .marquee:hover .marquee-track { animation-play-state: paused; }
+
+/* Pastilles des technologies : le cercle lime passe de l'une à l'autre */
+@keyframes lit {
+  0%, 14% { border-color: #C8FF54; box-shadow: 0 0 18px rgba(200, 255, 84, .25); }
+  22%, 100% { border-color: rgba(255, 255, 255, .15); box-shadow: none; }
+}
+.pill { animation: lit 8s linear infinite; animation-delay: calc(var(--i) * -1s); }
+.pill:hover { animation: none; }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .marquee-track { animation-duration: 90s; }
+  .pill { animation: none; }
 }
